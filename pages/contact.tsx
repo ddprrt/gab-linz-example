@@ -7,11 +7,19 @@ const AboutPage = () => (
     <h1>Contact</h1>
     <p>Say hi 👋</p>
     <form action="https://ftblgsendmail.azurewebsites.net/api/contact" method="POST">
-      Name: <input type="text" name="name" id="name" required/>
-      Mail: <input type="email" name="mail" id="mail" required/>
-      Message: <textarea name="text" id="text">
-        Be nice
-      </textarea>
+      <fieldset> 
+        <label htmlFor="name">Name</label>
+        <input type="text" name="name" id="name" required/>
+      </fieldset>
+      <fieldset>
+        <label htmlFor="mail">Mail</label>
+        <input type="email" name="mail" id="mail" required/>
+      </fieldset>
+      <fieldset>
+        <label htmlFor="text">Message</label>
+        <textarea name="text" id="text" rows={30} cols={10}></textarea>
+      </fieldset>
+      <button type="submit">Send it</button>
     </form>
     <p><Link href='/'><a>Go home</a></Link></p>
   </Layout>
