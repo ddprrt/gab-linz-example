@@ -17,7 +17,7 @@ const AboutPage = () => (
       </fieldset>
       <fieldset>
         <label htmlFor="text">Message</label>
-        <textarea name="text" id="text" rows={30} cols={10}></textarea>
+        <textarea name="text" id="text" rows={10} cols={30}></textarea>
       </fieldset>
       <button type="submit">Send it</button>
     </form>
