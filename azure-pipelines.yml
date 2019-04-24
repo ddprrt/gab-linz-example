@@ -1,0 +1,31 @@
+jobs:
+- job: PR
+  pool:
+    vmImage: 'macOS-10.13'
+
+  strategy:
+    maxParallel: 10
+    matrix:
+      node-10:
+        node_version: ^10.6.0
+
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: $(node_version)
+    displayName: 'Install Node.js 🐍'
+
+  - script: |
+      npm install
+    displayName: 'Install dependencies'
+  - script: |
+      npx next build && npx next export 
+    displayName: 'Run everything 🥾'
+
+  - task: AzureFileCopy@3
+    inputs:
+      SourcePath: 'out'
+      ConnectedServiceNameARM: 'Azure'
+      Destination: 'AzureBlob'
+      StorageAccountRM: 'ftblg'
+      ContainerName: '$web'
