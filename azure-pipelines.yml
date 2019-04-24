@@ -23,9 +23,11 @@ jobs:
     displayName: 'Run everything 🥾'
 
   - task: AzureFileCopy@3
+    displayName: 'Copy it to Azure 🚀'
     inputs:
       SourcePath: 'out'
       ConnectedServiceNameARM: 'Azure'
       Destination: 'AzureBlob'
       StorageAccountRM: 'ftblg'
       ContainerName: '$web'
+      cleanTargetBeforeCopy: true
