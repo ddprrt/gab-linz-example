@@ -24,7 +24,7 @@ const Layout: React.FunctionComponent<Props> = ({ children, title = 'This is the
     {children}
     <footer>
       <hr />
-      <span>I'm here to stay (Footer)</span>
+      <span>I'm here to stay 🦶</span>
     </footer>
   </div>
 )
