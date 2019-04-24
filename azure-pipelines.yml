@@ -1,7 +1,7 @@
 jobs:
 - job: PR
   pool:
-    vmImage: 'macOS-10.13'
+    vmImage: 'windows-2019'
 
   strategy:
     maxParallel: 10
