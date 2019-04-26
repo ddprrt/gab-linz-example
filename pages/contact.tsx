@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 
-const AboutPage = () => (
+const ContactPage = () => (
   <Layout title="Contact 👋">
     <h1>Contact</h1>
     <p>Say hi 👋</p>
@@ -25,4 +25,4 @@ const AboutPage = () => (
   </Layout>
 )
 
-export default AboutPage;
+export default ContactPage;
