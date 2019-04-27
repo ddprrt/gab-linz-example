@@ -31,3 +31,5 @@ jobs:
       StorageAccountRM: 'ftblg'
       ContainerName: '$web'
       cleanTargetBeforeCopy: true
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+
